@@ -1,0 +1,88 @@
+{
+  "name": "@morsecodeapp/morse",
+  "version": "0.1.0",
+  "description": "The most complete Morse code library for JavaScript & TypeScript. Encode, decode, audio playback, tap input, and more — zero dependencies.",
+  "keywords": [
+    "morse",
+    "morse code",
+    "morse translator",
+    "morse decoder",
+    "morse encoder",
+    "text to morse",
+    "morse audio",
+    "morse player",
+    "web audio",
+    "morse tap",
+    "prosigns",
+    "itu morse code",
+    "ham radio",
+    "amateur radio",
+    "cwops",
+    "morse alphabet"
+  ],
+  "license": "MIT",
+  "homepage": "https://morsecodeapp.com",
+  "author": {
+    "name": "MorseCodeApp",
+    "url": "https://morsecodeapp.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AppsYogi-com/morsecodeapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AppsYogi-com/morsecodeapp/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js",
+      "require": "./dist/core/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "size": "size-limit"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.2.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "size-limit": "^11.2.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "size-limit": [
+    {
+      "path": "dist/core/index.js",
+      "limit": "5 kB"
+    },
+    {
+      "path": "dist/index.js",
+      "limit": "6 kB"
+    }
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

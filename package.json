@@ -1,6 +1,6 @@
 {
   "name": "@morsecodeapp/morse",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The most complete Morse code library for JavaScript & TypeScript. Encode, decode, audio playback, tap input, and more — zero dependencies.",
   "keywords": [
     "morse",

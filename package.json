@@ -47,6 +47,11 @@
       "types": "./dist/core/index.d.ts",
       "import": "./dist/core/index.js",
       "require": "./dist/core/index.cjs"
+    },
+    "./audio": {
+      "types": "./dist/audio/index.d.ts",
+      "import": "./dist/audio/index.js",
+      "require": "./dist/audio/index.cjs"
     }
   },
   "files": [
@@ -78,8 +83,12 @@
       "limit": "5 kB"
     },
     {
-      "path": "dist/index.js",
+      "path": "dist/audio/index.js",
       "limit": "6 kB"
+    },
+    {
+      "path": "dist/index.js",
+      "limit": "12 kB"
     }
   ],
   "engines": {

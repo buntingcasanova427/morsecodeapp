@@ -2,9 +2,9 @@
 
 # @morsecodeapp/morse
 
-**The most complete Morse code library for JavaScript and TypeScript.**
+**The most complete Morse code library for JavaScript and TypeScript** — built for professional radio operators, educators, and developers. Features 11 character sets, prosigns, PARIS/Farnsworth timing, real-time audio synthesis via Web Audio API, and WAV export. Zero dependencies, tree-shakeable, TypeScript-first.
 
-Encode, decode, play, and export — with 11 character sets, audio playback, WAV export, prosigns, PARIS timing, and Farnsworth spacing. Zero dependencies.
+Built and used in production by **[MorseCodeApp.com](https://morsecodeapp.com)** — a morse code translator and learning platform used by thousands every month. This is the same library that powers the website.
 
 [![npm version](https://img.shields.io/npm/v/@morsecodeapp/morse.svg)](https://www.npmjs.com/package/@morsecodeapp/morse)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/@morsecodeapp/morse)](https://bundlephobia.com/package/@morsecodeapp/morse)

